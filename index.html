@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to RWD GDI</title>
+
+		<meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/gdicool.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <!-- Opening -->
+				<section>
+					<h1>Intro to Responsive Web Design</h1>
+					<p>Updated 7/18/2014</p>
+				</section>
+
+				<section>
+					<h2>Oh hai!</h2>
+					<p><strong>Instructor:</strong> Cecy Correa, @cecycorrea</p>
+					<p><strong>Contact:</strong> cecy@girldevelopit.com</p>
+					<p>Awesome TAs:</p>
+					<ul>
+						<li>Mae Reed, @maebees</li>
+						<li>Flip Stewart, @flipstewart</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Intros!</h2>
+					<p><img src="gifs/hello.gif"></p>
+				</section>
+				<section>
+					<h2>Rules</h2>
+					<ul>
+						<li>Don't be afraid to ask questions</li>
+						<li>Help each other out</li>
+						<li>Have fun!</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Why is Responsive Design important to you?</h1>
+				</section>
+				<section>
+					<h2>Definition</h2>
+					<blockquote>Responsive web design is an approach to web design in which a site is crafted to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling— across a wide range of devices (from desktop computer monitors to mobile phones).</blockquote>
+				</section>
+				<section>
+					<h2>The content adapts</h2>
+					<img src="gifs/adaptive.gif">
+				</section>
+				<section>
+					<h2>"Fluid layouts"</h2>
+					<img src="images/water.png">
+				</section>
+				<section>
+					<h2>How does it work?</h2>
+					<ul>
+						<li>Fluid grid</li>
+						<li>Flexible media</li>
+						<li>Media queries</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Rethinking the mobile web</h2>
+					<p>Presentation by Bryan Rieger (2010)</p>
+					<p><a href="http://cecy.co/1rhaFDi">cecy.co/1rhaFDi</a></p>
+					<p><small>Slide 56</small></p>
+				</section>
+				<section>
+					<h1>Let's review!</h1>
+				</section>
+				<section>
+					<h2>Desktop first?</h2>
+					<p class="fragment">Design desktop site first?</p>
+					<p class="fragment">Add @media queries?</p>
+					<p class="fragment">Noupe.</p>
+				</section>
+				<section>
+					<h2>Mobile first!</h2>
+					<p class="fragment">Design mobile first?</p>
+					<p class="fragment">Add @media queries?</p>
+					<p class="fragment">Progressively enhance the experience?</p>
+					<p class="fragment"><img src="gifs/yes.gif"></p>
+
+				</section>
+				<section>
+					<h2>Remember!</h2>
+						<blockquote>The absence of support for @media queries is in fact the first @media query.</blockquote>
+						<p><small>Slide 79</small></p>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<p>Class links: <a href="http://cecy.co/rwd-gdi-links">cecy.co/rwd-gdi-links</a></p>
+				</section>
+        		<section>
+        			<h1>Fluid grid</h1>
+        			<img src="gifs/cat-underwater.gif">
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<ul>
+        				<li>Define container widths as % not px</li>
+        				<li>This percentage will represent the width of the containing element, which means it will reflow according to viewport widths.</li>
+        			</ul>
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<p><strong>Formula:</strong> Target / Context</p>
+        			<p>Wherein...</p>
+        			<ul>
+        				<li>Target is the div you want to find the % of</li>
+        				<li>Context is parent div</li>
+        				<li>Result is width as %</li>
+        			</ul>
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<img src="images/grid_001.png">
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<p>Target = 640, context is 960</p>
+        			<p>What will the percentage be?</p>
+        			<p class="fragment">Answer: 66.666666666667%</p>
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<p>Let's turn the rest into %</p>
+        			<img src="images/grid_001.png">
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<p>Let's turn the rest into %</p>
+        			<img src="images/grid_003.png">
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<img src="images/code_001.png">
+        		</section>
+        		 <section>
+        			<h2>Fluid grid</h2>
+        			<img src="images/code_002.png">
+        			<p><small>*Round up to 4% to make it fit</small></p>
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<p><small><strong>How do we turn the Context into a %?</strong></small></p>
+        			<img src="images/grid_003.png">
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<p>We could...</p>
+        			<pre><code>.container { width: 100%; } </code></pre>
+        			<p class="fragment">Let's see what that does...</p>
+        			<p class="fragment">There are some issues, a little stretched out...</p>
+        		</section>
+        		<section>
+        			<h2>Fluid grid</h2>
+        			<p>Let's try....</p>
+        			<p><pre><code>.container { width: 100%; max-width: 960px; } </code></pre></p>
+					<p class="fragment">Much better!</p>        		
+				</section>
+				<section>
+					<h1>Flexible media</h1>
+					<img src="gifs/mask.gif">
+				</section>
+				<section>
+					<h2>Flexible media</h2>
+					<p>Videos, images, etc.</p>
+					<p>The secret again is using %</p>
+				</section>
+				<section>
+					<h2>Flexible media</h2>
+					<p>Secret sauce:</p>
+					<p><pre><code>img { max-width: 100%; }</code></pre></p>
+				</section>
+				<section>
+					<h2>Flexible media</h2>
+					<p>Let's add images to our practice site!</p>
+					<p><pre><code>img src="http://placekitten.com/700/200" alt="kitten"</code></pre></p>
+				</section>
+				<section>
+					<h2>Flexible media</h2>
+					<p>Now, let's add...</p>
+					<p><pre><code>img { max-width: 100%; }</code></pre></p>
+					<p class="fragment">What if we want to make it smaller?</p>
+				</section>
+				<section>
+					<h2>Flexible media</h2>
+					<p>Add a class to it!</p>
+					<p><pre><code>.cat { width: 50%; }</code></pre></p>
+				</section>
+				<section>
+					<h2>Develop it!</h2>
+					<p>Add 3 cat images to your site, make them sit side by side using %</p>
+					<p><img src="images/cats.png"></p>
+				</section>
+				<section>
+					<h2>Media queries!</h2>
+					<p>Allow you check for capabilities of a device, like:</p>
+					<ul>
+						<li>Width</li>
+						<li>Height</li>
+						<li>Orientation</li>
+						<li>Resolution</li>
+						<li>...and more!</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>Media queries!</h2>
+					<pre><code>@media all</code></pre>
+					<p>Applies to all media types: screen, print, tv...</p>
+				</section>
+				<section>
+					<h2>Media queries!</h2>
+					<pre><code>@media screen</code></pre>
+					<p>The one you want to use! Browsers and mobile devices are in this category. Excludes print, etc.</p>
+				</section>
+				<section>
+					<h2>Media queries!</h2>
+					<pre><code>@media print</code></pre>
+					<p>For printers</p>
+				</section>
+				<section>
+					<h2>Media queries!</h2>
+					<pre><code>@media handheld</code></pre>
+					<p>For "handheld" devices. Not widely supported right now.</p>
+				</section>
+				<section>
+					<h2>Media queries!</h2>
+					<pre><code>@media screen and (resolution: #dpi)</code></pre>
+					<p>For high resolution devices, like retina displays. You can use this to display higher res images to higher res devices.</p>
+				</section>
+				<section>
+					<h2>So many!</h2>
+					<pre><code>@media all and (orientation: landscape)</code></pre>
+					<pre><code>@media all and (orientation: portrait)</code></pre>
+					<p>There's even...</p>
+					<pre><code>@media 3d-glasses</code></pre>
+				</section>
+				<section>
+					<h2>If you Google...</h2>
+					<p>You may see...</p>
+					<pre><code>@media only screen ...</code></pre>
+					<p>"Only" is used so older browsers ignore the code.</p>
+				</section>
+				<section>
+					<h2>If you Google...</h2>
+					<p>This will only work in devices:</p>
+					<pre><code>@media screen and (min-device-width)</code></pre>
+					<p>This will work in your browser:</p>
+					<pre><code>@media screen and (min-width)</code></pre>
+				</section>
+				<section>
+					<h2>Develop it!</h2>
+					<p>Add a media query to your site: make the background red at 600px.</p>
+					<p class="fragment"><pre><code>@media screen and (min-width: 600px) { body {background: red;} }</code></pre></p>
+				</section>
+				<section>
+					<h1>Fluid typography</h1>
+					<img src="gifs/bunny.gif">
+				</section>
+				<section>
+					<h2>Fluid typography</h2>
+					<p>Not px but ems</p>
+				</section>
+				<section>
+					<h2>Fluid typography</h2>
+					<p>16px is default for browsers.</p>
+					<p class="fragment">Target / 16px = em</p>
+					<p class="fragment">Let's figure out our ems on our practice site!</p>
+				</section>
+				<section>
+					<h1>End of day 1!</h1>
+				</section>
+
+		</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
