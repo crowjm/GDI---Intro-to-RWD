@@ -20,7 +20,7 @@
 		<!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<!--[if lt IE 9]>
@@ -37,22 +37,18 @@
         <!-- Opening -->
 				<section>
 					<h1>Intro to Responsive Web Design</h1>
-					<p>Updated 7/18/2014</p>
+					<p>Updated 5/30/2015</p>
 				</section>
 
 				<section>
 					<h2>Oh hai!</h2>
 					<p><strong>Instructor:</strong> Cecy Correa, @cecycorrea</p>
 					<p><strong>Contact:</strong> cecy@girldevelopit.com</p>
-					<p>Awesome TAs:</p>
-					<ul>
-						<li>Mae Reed, @maebees</li>
-						<li>Flip Stewart, @flipstewart</li>
-					</ul>
 				</section>
 				<section>
 					<h2>Intros!</h2>
 					<p><img src="gifs/hello.gif"></p>
+          <p>A litle bit about yourself and what you hope to get out of this class.</p>
 				</section>
 				<section>
 					<h2>Rules</h2>
@@ -63,12 +59,19 @@
 					</ul>
 				</section>
 				<section>
-					<h1>Why is Responsive Design important to you?</h1>
+					<h1>WAT?</h1>
+          <img src="images/wat.png">
+          <p>What is responsive design?</p>
+          <p>What is mobile-first?</p>
 				</section>
 				<section>
 					<h2>Definition</h2>
 					<blockquote>Responsive web design is an approach to web design in which a site is crafted to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling— across a wide range of devices (from desktop computer monitors to mobile phones).</blockquote>
 				</section>
+        <section>
+          <h1>WAT?</h1>
+          <img src="gifs/wat.gif">
+        </section>
 				<section>
 					<h2>The content adapts</h2>
 					<img src="gifs/adaptive.gif">
@@ -77,14 +80,52 @@
 					<h2>"Fluid layouts"</h2>
 					<img src="images/water.png">
 				</section>
-				<section>
-					<h2>How does it work?</h2>
-					<ul>
-						<li>Fluid grid</li>
-						<li>Flexible media</li>
-						<li>Media queries</li>
-					</ul>
-				</section>
+        <section>
+          <h2>Responsive design has 3 components</h2>
+          <ol>
+            <li>Fluid grids</li>
+            <li>Flexible media</li>
+            <li>CSS media queries</li>
+          </ol>
+          <p>We'll talk about these in more detail later!</p>
+        </section>
+        <section>
+          <h1>So, then... what is mobile first?</h1>
+        </section>
+        <section>
+          <img src="images/activations_2014.png">
+        </section>
+        <section>
+          <img src="images/china_smartphones.png">
+        </section>
+        <section>
+          <img src="images/iphone_market_share.png">
+        </section>
+        <section>
+          <h2>There are a lot of things you can't control</h2>
+          <ul>
+            <li>What device do the users have?</li>
+            <li>What if Javascript doesn't load?</li>
+            <li>What if CSS doesn't load?</li>
+            <li>What if there is a slow connection?</li>
+          </ul>
+        </section>
+        <section>
+          <img src="images/facebook-sans-css.png">
+          <p>Facebook without Javascript &amp; CSS is hardly usable.</p>
+        </section>
+        <section>
+          <h2>Mobile-first is:</h2>
+          <ul>
+            <li>Mobile-first means designing for the <strong>lowest-common denominator</strong>.</li>
+            <li>Not just mobile, but designing for devices that may not be able to access CSS or JS.</li>
+            <li>It means designing in a way that will make your content as accessible as possible for all of your users.</li>
+          </ul>
+        </section>
+        <section>
+          <img src="images/no-media-queries.png">
+          <p>This will make more sense later, I promise!</p>
+        </section>
 				<section>
 					<h2>Rethinking the mobile web</h2>
 					<p>Presentation by Bryan Rieger (2010)</p>
@@ -95,28 +136,24 @@
 					<h1>Let's review!</h1>
 				</section>
 				<section>
-					<h2>Desktop first?</h2>
-					<p class="fragment">Design desktop site first?</p>
-					<p class="fragment">Add @media queries?</p>
-					<p class="fragment">Noupe.</p>
+					<h2>Responsive design</h2>
+					<p>Techniques that include fluid layouts, flexible images and media queries.</p>
 				</section>
 				<section>
 					<h2>Mobile first!</h2>
-					<p class="fragment">Design mobile first?</p>
-					<p class="fragment">Add @media queries?</p>
-					<p class="fragment">Progressively enhance the experience?</p>
-					<p class="fragment"><img src="gifs/yes.gif"></p>
-
+					<p>An approach that takes into consideration the lowest-common denominator.</p>
+          <p>It's asking yourself as a designer: "What is the most important thing users need to do on this site?" and making that as accessible as possible.</p>
+          <p><strong>Responsive design</strong> is a way to achieve mobile-first.</p>
 				</section>
 				<section>
 					<h2>Remember!</h2>
 						<blockquote>The absence of support for @media queries is in fact the first @media query.</blockquote>
 						<p><small>Slide 79</small></p>
 				</section>
-				<section>
-					<h2>Resources</h2>
-					<p>Class links: <a href="http://cecy.co/rwd-gdi-links">cecy.co/rwd-gdi-links</a></p>
-				</section>
+        <section>
+          <h1>Enough mumbo jumbo!</h1>
+          <h2>Let's learn how to responsive web design!</h2>
+        </section>
         		<section>
         			<h1>Fluid grid</h1>
         			<img src="gifs/cat-underwater.gif">
@@ -173,18 +210,16 @@
         			<img src="images/grid_003.png">
         		</section>
         		<section>
-        			<h2>Fluid grid</h2>
-        			<p>We could...</p>
-        			<pre><code>.container { width: 100%; } </code></pre>
-        			<p class="fragment">Let's see what that does...</p>
-        			<p class="fragment">There are some issues, a little stretched out...</p>
-        		</section>
-        		<section>
-        			<h2>Fluid grid</h2>
-        			<p>Let's try....</p>
-        			<p><pre><code>.container { width: 100%; max-width: 960px; } </code></pre></p>
-					<p class="fragment">Much better!</p>        		
-				</section>
+        			<h2>Fluid grid exercise</h2>
+              <p><strong>Go here:</strong></p>
+        			<p><a href="http://cecy.co/rwd-fluid-grids">cecy.co/rwd-fluid-grids</a></p>
+              <ul>
+                <li>(Create a Codepen account if you don't have one)</li>
+                <li>Fork it!</li>
+                <li>Watch me demo</li>
+                <li>Then you can try!</li>
+              </ul>
+            </section>
 				<section>
 					<h1>Flexible media</h1>
 					<img src="gifs/mask.gif">
