@@ -1,9 +1,10 @@
 # Intro to RWD
-**GDI ATX July 2014**
+Slides for GDI Austin's Intro to RWD class. Originally by [https://github.com/cecyc](Cecy Correa).
 
-This class covers principles of RWD:
+This class covers:
 
 * Media queries
-* Resizing images
-* Grid system
+* Fluid images
+* Flexible grid system
 * Fluid typography
+* Mobile first development
