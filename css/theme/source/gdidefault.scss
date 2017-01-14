@@ -9,7 +9,29 @@ $linkColor: #01A9B4;
 @mixin bodyBackground() {
 	@include radial-gradient( rgba(28,30,32,1), rgba(85,90,95,1) );
 }
+.reveal p {
+	line-height: 1.5;
+	text-align: left;
+}
 
+.reveal h2 {
+	line-height: 1.2 !important;
+}
+
+.reveal p, .reveal li {
+	margin-bottom: 1.25rem;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.reveal blockquote {
+	background: none;
+	color: #d8ae64;
+	line-height: 1.5;
+	text-align: left;
+	width: 100%;
+}
 
 
 // Theme template ------------------------------
