@@ -243,43 +243,54 @@
 					<p>Add 3 cat images to your site, make them sit side by side using %</p>
 					<p><img src="images/cats.png"></p>
 				</section>
-		<section>
-			<h2>Media queries!</h2>
-			<p>Allow you check for capabilities of a device, like:</p>
-			<ul>
-				<li>Width</li>
-				<li>Height</li>
-				<li>Orientation</li>
-				<li>Resolution</li>
-				<li>...and more!</li>
-			</ul>
-		</section>
-		<section>
-			<h2>Media queries!</h2>
-		<pre><code>@media all</code></pre>
-		<p>Applies to all media types: screen, print, tv...</p>
-	</section>
-	<section>
-		<h2>Media queries!</h2>
-	<pre><code>@media screen</code></pre>
-	<p>The one you want to use! Browsers and mobile devices are in this category. Excludes print, etc.</p>
-	</section>
-	<section>
-	<h2>Media queries!</h2>
-	<pre><code>@media print</code></pre>
-	<p>For printers</p>
-	</section>
-	<section>
-	<h2>Media queries!</h2>
-	<pre><code>@media handheld</code></pre>
-	<p>For "handheld" devices. Not widely supported right now.</p>
-	</section>
-	<section>
-	<h2>Media queries!</h2>
-	<pre><code>@media screen and (resolution: #dpi)</code></pre>
-	<p>For high resolution devices, like retina displays. You can use this to display higher res images to higher res devices.</p>
-	</section>
-
+				<section>
+					<h2>Media Queries</h2>
+					<p>Media queries are a test for the browser. If conditions (like height, width, resolution) are met, certain styles will be shown. If not, browser will skip over.</p>
+					<p>Use media queries when you need them in the design, not at prescribed device viewport widths.</p>
+					<p>The point where a media query happens is a breakpoint.</p>
+				</section>
+				<section>
+					<h2>Media Queries</h2>
+					<pre><code>@media all</code></pre>
+					<p>Applies to all media types: screen, print, tv...</p>
+				</section>
+				<section>
+					<h2>Media Queries</h2>
+					<pre><code>@media print</code></pre>
+					<p>For printers</p>
+				</section>
+				<section>
+					<h2>Media Queries</h2>
+					<pre><code>@media screen and (resolution: #dpi)</code></pre>
+					<p>For high resolution devices, like retina displays. You can use this to display higher res images to higher res devices.</p>
+				</section>
+				<section>
+					<h2>So many!</h2>
+					<pre class="fragment"><code>@media all and (orientation: landscape)</code></pre>
+					<pre class="fragment"><code>@media all and (orientation: portrait)</code></pre>
+					<p class="fragment">There's even...</p>
+					<pre class="fragment"><code>@media 3d-glasses</code></pre>
+				</section>
+				<section>
+					<h2>If you Google...</h2>
+					<p>You may see...</p>
+					<pre><code>@media only screen ...</code></pre>
+					<p>"Only" is used so older browsers ignore the code.</p>
+					<p>This will only work in devices:</p>
+					<pre><code>@media screen and (min-device-width)</code></pre>
+				</section>
+				<section>
+					<h2>Media Queries</h2>
+					<pre><code>@media screen</code></pre>
+					<p>The one you want to use! Browsers and mobile devices are in this category.</p>
+					<p>We'll combine this with a min-width to change things about our design at certain sizes.</p>
+					<pre><code>@media screen and (min-width: width)</code></pre>
+				</section>
+				<section>
+					<h2>Develop it!</h2>
+					<p>Add a media query to your site: make the background teal at 600px.</p>
+					<p class="fragment"><pre><code>@media screen and (min-width: 600px) { body {background: teal;} }</code></pre></p>
+				</section>
 
 
 
@@ -308,31 +319,8 @@
 
 
 
-	<section>
-	<h2>So many!</h2>
-	<pre><code>@media all and (orientation: landscape)</code></pre>
-	<pre><code>@media all and (orientation: portrait)</code></pre>
-	<p>There's even...</p>
-	<pre><code>@media 3d-glasses</code></pre>
-	</section>
-	<section>
-	<h2>If you Google...</h2>
-	<p>You may see...</p>
-	<pre><code>@media only screen ...</code></pre>
-	<p>"Only" is used so older browsers ignore the code.</p>
-	</section>
-	<section>
-	<h2>If you Google...</h2>
-	<p>This will only work in devices:</p>
-	<pre><code>@media screen and (min-device-width)</code></pre>
-	<p>This will work in your browser:</p>
-	<pre><code>@media screen and (min-width)</code></pre>
-	</section>
-	<section>
-	<h2>Develop it!</h2>
-	<p>Add a media query to your site: make the background red at 600px.</p>
-	<p class="fragment"><pre><code>@media screen and (min-width: 600px) { body {background: red;} }</code></pre></p>
-	</section>
+
+
 	<section>
 	<h1>Fluid typography</h1>
 	<img src="gifs/bunny.gif">
